@@ -1,4 +1,4 @@
-# Interactive Visual Novel – Creative Project
+# Interactive Visual Novel [Answers Critical Questions] – Creative Project
 
 This is an interactive visual introduction I built using HTML, CSS, and JavaScript as part of my OpenSesame Internship application.
 
