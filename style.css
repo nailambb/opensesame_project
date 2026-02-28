@@ -1,0 +1,176 @@
+/* Remove default browser spacing */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .title-screen::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4); /* cinematic dark overlay */
+    top: 0;
+    left: 0;
+  }
+  
+  .title-screen h1,
+  .title-screen button {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Title screen container */
+  .title-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  
+    /* YOUR BACKGROUND IMAGE */
+    background: url("assets/title_background.png") no-repeat center center;
+    background-size: cover;
+  
+    /* Centering text like a VN title screen */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    z-index: 10;
+  }
+  
+  /* Make the background image fill the screen */
+  .title_background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* IMPORTANT */
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  /* Scene container */
+  .scene {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  /* Background */
+  .background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7) blur(1px);
+  }
+  
+  /* CHARACTER (IMPORTANT FOR TRANSPARENT SPRITES) */
+  .sprite {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 75vh;
+    image-rendering: pixelated;
+  }
+  
+  /* Textbox */
+  .textbox {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 160px;
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  
+  /* Name tag */
+  .name {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  
+  /* Dialogue text */
+  #text {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
+  /* Click indicator */
+  .click {
+    position: absolute;
+    right: 30px;
+    bottom: 15px;
+    opacity: 0.8;
+    font-size: 14px;
+  }
+
+  /* FULL SCREEN BLACK CREDITS */
+.credits-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    color: white;
+    display: none; /* hidden until triggered */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 20;
+  }
+  
+  /* SCROLLING TEXT */
+  .credits-content {
+    text-align: center;
+    animation: scrollCredits 20s linear forwards;
+  }
+  
+  .credits-content h1 {
+    font-size: 48px;
+    margin-bottom: 40px;
+  }
+  
+  .credits-content p {
+    font-size: 22px;
+    margin: 20px 0;
+  }
+  
+  /* MOVIE-LIKE UPWARD SCROLL */
+  @keyframes scrollCredits {
+    0% {
+      transform: translateY(100vh);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-120vh);
+      opacity: 0;
+    }
+  }
+
+  .fade-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 2s ease;
+    z-index: 15;
+  }

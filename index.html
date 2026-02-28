@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nailat VN Intro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="titleScreen" class="title-screen">
+        <h1>Nailat Taiyabah : Creative Project Submission</h1>
+        <button id="startButton">Start</button>
+    </div>
+    <div id="creditsScreen" class="credits-screen">
+        <div class="credits-content">
+          <h1>The End</h1>
+          <p>Thank you for experiencing my creative project!</p>
+          <p>Created by Nailat Taiyabah</p>
+          <p>Application for OpenSesame Internship</p>
+          <p>Built with HTML, CSS, and JavaScript</p>
+        </div>
+    </div>
+    <div id="fadeOverlay" class="fade-overlay"></div>
+    <div class="scene">
+        <!-- Background -->
+        <img src="assets/background.png" class="background">
+
+        <!-- Character Sprite (Transparent PNG) -->
+        <img id="sprite" src="assets/open_closed.png" class="sprite">
+
+        <!-- Dialogue Box -->
+        <div class="textbox" id="textbox">
+        <div class="name">Nailat</div>
+        <p id="text"></p>
+        <span class="click">Click to continue ▶</span>
+        </div>
+    </div>
+    <p>How I see OpenSesame in my journey: Building AI-powered, human-centered learning tools.</p>
+
+    <script src="script.js"></script>
+</body>
+</html>
