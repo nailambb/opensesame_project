@@ -9,4 +9,4 @@ Features:
 - Custom artwork and assets
 
 Live Demo:
-[PASTE YOUR GITHUB PAGES LINK HERE]
+(https://nailambb.github.io/opensesame_project/)
